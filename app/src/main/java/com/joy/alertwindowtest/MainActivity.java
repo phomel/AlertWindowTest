@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         switch ("a") {
             case "a":
             case "b":
-//                startService(new Intent(this, AlertWindowService.class));
+                startService(new Intent(this, AlertWindowService.class));
                 break;
             case "c":
                 String s = "";
