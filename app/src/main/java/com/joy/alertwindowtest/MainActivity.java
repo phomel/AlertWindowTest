@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 //                startService(new Intent(this, AlertWindowService.class));
                 break;
             case "c":
-                String s = "";
+//                String s = "";
                 break;
         }
     }
