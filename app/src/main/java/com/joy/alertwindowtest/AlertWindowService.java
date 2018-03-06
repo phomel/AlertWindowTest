@@ -35,7 +35,7 @@ public class AlertWindowService extends Service {
         final WindowManager manager = (WindowManager) getApplicationContext().getSystemService(Context.WINDOW_SERVICE);
         final View view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.float_window_small, null);
         final Button button = (Button) view.findViewById(R.id.percent);
-        WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
+        final WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
         layoutParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
                 | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;//默认alertWindow出现后所有的view不可点击,通过flag修改
@@ -49,7 +49,7 @@ public class AlertWindowService extends Service {
             @Override
             public void run() {
                 Toast.makeText(getApplicationContext(), "啊哈哈", Toast.LENGTH_SHORT).show();
-                manager.removeView(view);
+//                manager.removeView(view);
             }
         }, 3000L);
         button.setOnClickListener(new View.OnClickListener() {
